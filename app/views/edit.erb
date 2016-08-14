@@ -1,0 +1,13 @@
+Current Ingredients: <%= @recipe.ingredients %>
+
+<form action="/recipes/<%= @recipe.id %>/edit" method="post">
+  <input id="hidden" type="hidden" name="_method" value="patch">
+  <legend>New Recipe Name</legend>
+  <input type="text" name="name">
+  <legend>New Recipe Ingredients</legend>
+  <input type="text" name="ingredients">
+  <legend>New Recipe Cook Time</legend>
+  <input type="text" name="cook_time">
+  <input type="submit" value="submit">
+
+</form>
